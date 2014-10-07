@@ -14,6 +14,7 @@
   ],
   "dependencies": {
     "ember-data": "1.0.0-beta.10",
-    "ember": "~1.7.0"
+    "ember": "~1.7.0",
+    "jquery-mockjax": "~1.5.4"
   }
 }

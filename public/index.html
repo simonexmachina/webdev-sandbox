@@ -4,13 +4,25 @@
   <script src="vendor/handlebars/handlebars.js"></script>
   <script src="vendor/ember/ember.js"></script>
   <script src="vendor/ember-data/ember-data.js"></script>
+  <script src="vendor/jquery-mockjax/jquery.mockjax.js"></script>
+  <script src="vendor/ember-devtools/lib/ember-devtools.js"></script>
+  <script></script>
   <script src="app.js"></script>
 </head>
 <body>
   <script type="text/x-handlebars" data-template-name="application">
-    Hello World!
+    {{outlet}}
   </script>
   <script type="text/x-handlebars" data-template-name="index">
+    Author: {{view Ember.Select
+        prompt="Author"
+        content=users
+        selection=user
+        optionLabelPath="content.id"
+        optionValuePath="content.id"
+    }}
+    Selected: {{user.id}}
+    Num comments: {{comments.length}}
   </script>
 </body>
 </html>
